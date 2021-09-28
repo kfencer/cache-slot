@@ -1,0 +1,28 @@
+{
+  "name": "kfencer/cache-slot",
+  "description": "Tiny library for preventing code duplication when determining cache keys and cache lifetime.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexey Khokhlov",
+      "email": "owlet@docfile.org",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "owlet@docfile.org"
+  },
+  "keywords": [
+    "cache"
+  ],
+  "require": {
+    "php": "^7.4",
+    "psr/cache": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kfencer\\Infrastructure\\Cache\\Slot\\": "src/"
+    }
+  }
+}
