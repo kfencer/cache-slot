@@ -17,7 +17,7 @@ trait CacheSlotTrait
         return $this->lifetime;
     }
 
-    protected function setKeyFromArray(array $args, string $separator = '|'): void
+    protected function setKey(array $args = [], string $separator = '|'): void
     {
         array_unshift($args, static::class);
         $this->key = implode($separator, $args);
