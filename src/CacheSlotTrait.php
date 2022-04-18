@@ -20,6 +20,6 @@ trait CacheSlotTrait
     protected function setKey(array $args = [], string $separator = '|'): void
     {
         array_unshift($args, static::class);
-        $this->key = implode($separator, $args);
+        $this->key = md5(implode($separator, $args));
     }
 }
