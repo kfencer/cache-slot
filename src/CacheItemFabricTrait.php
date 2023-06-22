@@ -19,6 +19,15 @@ trait CacheItemFabricTrait
             $cacheItem->expiresAfter($lifetime);
         }
 
+        $tags = array_map(
+            fn(CacheTagInterface $tag): string => $tag->getKey(),
+            $this->getTags()
+        );
+
+        if ($tags) {
+            $cacheItem->tag($tags);
+        }
+
         return $cacheItem;
     }
 }
