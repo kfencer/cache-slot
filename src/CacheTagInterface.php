@@ -2,7 +2,6 @@
 
 namespace Kfencer\Infrastructure\Cache\Slot;
 
-interface CacheTagInterface
+interface CacheTagInterface extends CacheKeyInterface
 {
-    public function getKey(): string;
 }

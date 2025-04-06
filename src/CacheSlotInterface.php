@@ -2,9 +2,8 @@
 
 namespace Kfencer\Infrastructure\Cache\Slot;
 
-interface CacheSlotInterface
+interface CacheSlotInterface extends CacheKeyInterface
 {
-    public function getKey(): string;
     public function getLifetime(): ?int;
 
     /**
